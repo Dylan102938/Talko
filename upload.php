@@ -68,7 +68,7 @@
         $pretty_translated = '<p>';
 
         for ($i = 0; $i < 3; $i++) {
-            $translated_sent = file_get_contents($url.":5000/translateobj?q=".urlencode($final_array[$i])."&lang=".$langcode);
+            $translated_sent = file_get_contents($link.":5000/translateobj?q=".urlencode($final_array[$i])."&lang=".$langcode);
             $pretty_example .= "<p>".$final_array[$i]."</p>";
             $pretty_translated .= "<p>".$translated_sent."</p>";
         }
