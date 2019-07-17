@@ -1,0 +1,289 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    max-width: 100%;
+    border-bottom: 3px solid #E5E5E5;
+    height: 80px;
+    padding-right: 200px;
+    padding-left: 445px;
+}
+
+.first {
+    margin-left: 0 !important;
+}
+
+.nav {
+    display: block;
+    float: left;
+    margin-left: 100px;
+    vertical-align: middle;
+    transition-duration: 0.4s;
+}
+
+.nav-text {
+    font-family: "Dosis", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #D8D8D8;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.nav-text:hover, .active {
+    color: #339AF0;
+    transition-duration: 0.4s;
+}
+
+.nav-icon {
+    margin-right: 10px;
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+.upload-div {
+    width: 49%;
+    float: left;
+    max-width: 49%;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+.container {
+    margin-top: 75px;
+    margin-left: 75px;
+}
+
+
+.display-text {
+    width: auto;
+    float: left;
+    background-color: #339AF0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: white;
+    border: 3px solid #339AF0;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "Dosis", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+.heading {
+    font-family: "Dosis", sans-serif;
+    font-weight: 800;
+}
+
+.display-text:hover, .active {
+    background-color: white;
+    color: #339AF0;
+}
+
+.display-text-inverted {
+    width: auto;
+    background-color: white;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: #339AF0;
+    border: 3px solid #339AF0;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "Dosis", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+.display-text-inverted:hover {
+    background-color: #339AF0;
+    color: white;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border-left: 2px solid #E5E5E5;
+    border-right: 2px solid #E5E5E5;
+}
+
+.autocomplete-items div {
+    text-transform: uppercase;
+    background-color: white;
+    width: 154px;
+    font-family: "Dosis", sans-serif;
+    font-weight: 800;
+    border-bottom: 2px solid #E5E5E5;
+    padding: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.autocomplete-items div:hover {
+    background-color: #E5E5E5;
+}
+
+.vocab {
+
+    border-radius: 10px !important;
+    width: 100%;
+    height: 240px;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    display: block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-bottom: 100px;
+
+}
+
+.display-image {
+    float: left;
+    width: 18%;
+    height: 100%;
+    border-right: 2px solid #E5E5E5;
+}
+
+.image {
+    width: 100%;
+}
+
+.text {
+    float: left;
+    padding: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 17%;
+    height: 100%;
+    max-height: 100%;
+    text-align: center;
+    border-right: 2px solid #E5E5E5;
+}
+
+.text p {
+    font-family: "Dosis", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.text2 {
+    float: left;
+    padding: 30px;
+    padding-left: 15px;
+    height: 100%;
+    overflow: scroll;
+    max-height: 100%;
+    width: calc(65% - 79px);
+}
+
+.examples {
+    margin-bottom: 15px;
+}
+
+.text2 p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+#vocab-container {
+    margin-right: 75px;
+}
+
+#upload-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+#custom-upload {
+    border: 3px solid #339AF0;
+    color: white;
+    background-color: #339AF0;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "Dosis", sans-serif;
+    font-weight: 800;
+}
+
+#image-upload {
+    border-right: 3px solid #E5E5E5;
+}
+
+#image {
+    position: absolute;
+    font-size: 100px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#myImg {
+    max-width: 300px;
+}
+
+#language {
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 169px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    border: 3px solid #339AF0;
+    border-radius: 8px;
+}
+
+#box {
+    margin-top: 40px;
+    width: 300px;
+    height: 200px;
+    border: 3px solid #339AF0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+#submit {
+    border: 2px solid #339AF0;
+    color: white;
+    background-color: #339AF0;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "Dosis", sans-serif;
+    width: 171px;
+    font-weight: 800;
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+#submit:hover {
+    background-color: white;
+    color: #339AF0;
+}
+
+#vocabulary {
+    width: 100%;
+    max-width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
