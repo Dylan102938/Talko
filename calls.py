@@ -3,9 +3,6 @@ from flask_cors import CORS
 from google.cloud import vision
 from google.cloud.vision import types
 from google.cloud import translate
-import urllib
-import urllib.request
-import urllib.parse
 import json
 import os
 import io
