@@ -10,7 +10,7 @@ import io
 app = Flask(__name__)
 CORS(app)
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\wamp64\www\Talko\creds.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "creds.json"
 
 @app.route('/objrec',methods=["GET","POST"])
 def objrec():
