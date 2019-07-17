@@ -65,6 +65,14 @@
                 </div>';
         }
     }
+
+    if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        $link = "https";
+    else
+        $link = "http";
+
+    $link .= "://";
+    $link .= $_SERVER['HTTP_HOST'];
 ?>
 
 <html>
@@ -114,6 +122,7 @@
             <div style = "display: none"><p id = "languages"><?php echo $languages; ?></p></div>
             <div style = "display: none"><p id = "translate"><?php echo $language; ?></p></div>
             <div style = "display: none"><p id = "show"><?php echo $active; ?></p></div>
+            <div style = "display: none"><p id  = "url"><?php echo $link; ?></p></div>
         </div>
         <!--end of nav-->
 

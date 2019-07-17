@@ -3,7 +3,6 @@ from flask_cors import CORS
 from google.cloud import vision
 from google.cloud.vision import types
 from google.cloud import translate
-from yandex.Translater import Translater
 import urllib
 import urllib.request
 import urllib.parse
@@ -37,43 +36,6 @@ def objrec():
         for label in labels:
             objects.append(label.description)
         return json.dumps(objects)
-
-@app.route('/translatesent', methods=["GET","POST"])
-def translatesent():
-    if request.method == "GET":
-        text = request.args["q"]
-        target = request.args["lang"]
-
-        data = json.load(urllib.request.urlopen("http://api.urbandictionary.com/v0/define?term={" + urllib.parse.quote(text) + "}"))
-        examples = []
-        count = 0
-        for example in data['list']:
-            if count == 3:
-                break
-
-            if "*" not in example['example'] and "girl" not in example['example'] and len(example['example']) < 100:
-                temp = example['example']
-                temp = temp.replace('\r', '')
-                temp = temp.replace('[', '')
-                temp = temp.replace(']', '')
-                temp = temp.replace('\"', '')
-                temp = temp.rstrip('\n')
-                examples.append(temp)
-                count = count + 1
-
-        translate_client = translate.Client()
-        target = request.args["lang"]
-        translated = []
-        final = []
-        length = len(examples)
-        for x in range(0, length):
-            translation = translate_client.translate(examples[x], target_language=target)
-            translated.append(translation['translatedText'])
-
-        for x in range (0,3):
-            final.append({'ex': examples[x], 'tr' : translated[x]})
-
-        return jsonify(final)
 
 @app.route('/translateobj', methods=["GET","POST"])
 def translateobj():

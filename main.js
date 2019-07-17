@@ -58,7 +58,7 @@ for (var i = 0; i < ISO.length; i++) {
 
 if (document.getElementById("status") != "") {
     var request = new XMLHttpRequest();
-    var url = "http://localhost:5000/objrec?image=" + document.getElementById("status").innerHTML;
+    var url = document.getElementById("url").innerHTML + ":5000/objrec?image=" + document.getElementById("status").innerHTML;
     request.open("GET", url);
     request.onload = function() {
         $("#myImg").attr("src", document.getElementById("status").innerHTML);
@@ -103,7 +103,7 @@ if (document.getElementById("status") != "") {
             }
 
             var request2 = new XMLHttpRequest();
-            var url = "http://localhost:5000/translateobj?q="
+            var url = document.getElementById("url").innerHTML + ":5000/translateobj?q="
                 + textToTranslate + "&lang=" + language;
             request2.open("GET", url);
 

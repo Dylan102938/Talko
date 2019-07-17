@@ -4,6 +4,14 @@
     require_once("./twitteroauth/twitteroauth/twitteroauth-master/twitteroauth/twitteroauth.php");
     mysqli_set_charset($conn, "utf8");
 
+    if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        $link = "https";
+    else
+        $link = "http";
+
+    $link .= "://";
+    $link .= $_SERVER['HTTP_HOST'];
+
     function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oauth_token_secret)
     {
 
@@ -60,7 +68,7 @@
         $pretty_translated = '<p>';
 
         for ($i = 0; $i < 3; $i++) {
-            $translated_sent = file_get_contents("http://localhost:5000/translateobj?q=".urlencode($final_array[$i])."&lang=".$langcode);
+            $translated_sent = file_get_contents($url.":5000/translateobj?q=".urlencode($final_array[$i])."&lang=".$langcode);
             $pretty_example .= "<p>".$final_array[$i]."</p>";
             $pretty_translated .= "<p>".$translated_sent."</p>";
         }
